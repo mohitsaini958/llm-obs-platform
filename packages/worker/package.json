@@ -1,0 +1,15 @@
+{
+  "name": "@llm-obs/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@llm-obs/shared": "*",
+    "ioredis": "^5.4.1"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "llm-obs-platform",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:shared": "npm run build --workspace=@llm-obs/shared",
+    "dev": "npm run build:shared && npm run dev --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "infra:up": "docker compose up -d",
+    "infra:down": "docker compose down"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
